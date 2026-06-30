@@ -840,7 +840,7 @@ document.getElementById('pib-input').addEventListener('keydown', e => {
 // Запити йдуть через проксі-сервер (Cloudflare Worker), щоб ключ Groq
 // не зберігався у коді сайту — інакше GitHub блокує пуш і будь-хто
 // зможе вкрасти ключ через "View Page Source". Деплой Worker'а — у файлі worker.js.
-const PROXY_URL = 'https://tck.yaroslavtokarr.workers.dev/'; // ← заміните на URL вашого Worker'а
+const PROXY_URL = ''; // ← заміните на URL вашого Worker'а https://tck.yaroslavtokarr.workers.dev/
 
 const SYSTEM_PROMPT = `Ти — Микола Бондаренко, співробітник Територіального центру комплектування (ТЦК) України. 
 Відповідай ТІЛЬКИ українською мовою. Тримай відповіді лаконічними (2–5 речень).
@@ -916,8 +916,8 @@ async function sendMessage() {
     appendMessage(reply, 'agent');
   } catch (err) {
     console.error('Chat error:', err);
-    showTyping(false);
-    appendMessage('Виникла помилка з\'єднання. Будь ласка, спробуйте пізніше або зателефонуйте до найближчого ТЦК.', 'agent');
+    showTyping(false); // Виникла помилка з\'єднання. Будь ласка, спробуйте пізніше або зателефонуйте до найближчого ТЦК
+    appendMessage('Чат тимчасово закритий на технічне обслуговування. Орієнтовний час завершення робіт — 19:30 30.06.', 'agent');
   }
 
   document.getElementById('send-btn').disabled = false;
