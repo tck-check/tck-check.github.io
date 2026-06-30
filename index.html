@@ -17,7 +17,6 @@
       radial-gradient(ellipse at 80% 20%, rgba(20,60,20,0.2) 0%, transparent 50%);
   }
 
-  /* ── TOP BAR ── */
   .topbar {
     background: #111a11;
     border-bottom: 2px solid #2d5a2d;
@@ -26,15 +25,8 @@
     align-items: center;
     gap: 14px;
   }
-  .topbar-logo {
-    font-size: 22px;
-    color: #f0c030;
-  }
-  .topbar-title {
-    font-size: 13px;
-    color: #8ab88a;
-    letter-spacing: 0.04em;
-  }
+  .topbar-logo { font-size: 22px; color: #f0c030; }
+  .topbar-title { font-size: 13px; color: #8ab88a; letter-spacing: 0.04em; }
   .topbar-badge {
     margin-left: auto;
     background: rgba(40,100,40,0.4);
@@ -47,19 +39,10 @@
     align-items: center;
     gap: 6px;
   }
-  .topbar-badge::before {
-    content: '🔒';
-    font-size: 10px;
-  }
+  .topbar-badge::before { content: '🔒'; font-size: 10px; }
 
-  /* ── LAYOUT ── */
-  .page {
-    max-width: 820px;
-    margin: 36px auto;
-    padding: 0 16px 80px;
-  }
+  .page { max-width: 820px; margin: 36px auto; padding: 0 16px 80px; }
 
-  /* ── BREADCRUMB ── */
   .breadcrumb {
     font-size: 12px;
     color: #5a8a5a;
@@ -68,11 +51,10 @@
     gap: 6px;
     align-items: center;
   }
-  .breadcrumb a { color: #6aaa6a; text-decoration: none; }
+  .breadcrumb a { color: #6aaa6a; text-decoration: none; cursor: pointer; }
   .breadcrumb a:hover { text-decoration: underline; }
   .breadcrumb span { color: #3a6a3a; }
 
-  /* ── MAIN CARD ── */
   .card {
     background: #243024;
     border: 1px solid #2e5a2e;
@@ -81,7 +63,6 @@
     box-shadow: 0 4px 32px rgba(0,0,0,0.5), 0 0 0 1px rgba(60,120,60,0.1);
     margin-bottom: 20px;
   }
-
   .card-title {
     font-size: 26px;
     font-weight: 700;
@@ -101,7 +82,6 @@
     flex-shrink: 0;
   }
 
-  /* ── INTEGRATED BANNER ── */
   .integrated-banner {
     background: linear-gradient(90deg, #1e4a1e 0%, #1a4220 100%);
     border: 1px solid #2e6a2e;
@@ -114,25 +94,9 @@
     font-size: 13px;
     color: #8acc8a;
   }
-  .integrated-banner .tryzub {
-    font-size: 18px;
-    color: #f0c030;
-    flex-shrink: 0;
-  }
+  .integrated-banner .tryzub { font-size: 18px; color: #f0c030; flex-shrink: 0; }
 
-  /* ── FORM ── */
-  .form-row {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 4px;
-  }
-  .input-row {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
-
+  .form-row { display: flex; flex-direction: column; gap: 10px; margin-bottom: 4px; }
   .field-label {
     font-size: 11px;
     color: #6a9a6a;
@@ -140,7 +104,6 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
   }
-
   input[type="text"], input[type="date"] {
     background: #1a2a1a;
     border: 1.5px solid #3a6a3a;
@@ -158,12 +121,7 @@
     border-color: #5aaa5a;
     box-shadow: 0 0 0 3px rgba(90,170,90,0.15);
   }
-
-  .date-btn-row {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
+  .date-btn-row { display: flex; gap: 10px; align-items: center; }
   .date-btn-row input { flex: 0 0 200px; }
 
   .btn-check {
@@ -183,13 +141,8 @@
   }
   .btn-check:hover { filter: brightness(1.15); }
   .btn-check:active { transform: scale(.97); }
-  .btn-check:disabled {
-    opacity: .6;
-    cursor: not-allowed;
-    filter: none;
-  }
+  .btn-check:disabled { opacity: .6; cursor: not-allowed; filter: none; }
 
-  /* ── META ── */
   .meta-info {
     margin-top: 10px;
     text-align: center;
@@ -199,7 +152,6 @@
   }
   .meta-info .shield { color: #6aaa6a; }
 
-  /* ── RESULT ── */
   .result-box {
     margin-top: 18px;
     border-radius: 8px;
@@ -213,33 +165,12 @@
     display: none;
   }
   @keyframes fadeIn { from { opacity:0; transform: translateY(-6px); } to { opacity:1; transform:none; } }
-
-  .result-box.not-wanted {
-    background: linear-gradient(90deg, #1a4a1a, #1e4e1e);
-    border: 1.5px solid #3a8a3a;
-    color: #7add7a;
-  }
-  .result-box.wanted {
-    background: linear-gradient(90deg, #4a1a1a, #5a2020);
-    border: 1.5px solid #aa3a3a;
-    color: #ff8080;
-  }
-  .result-box.no-info {
-    background: linear-gradient(90deg, #2a2a1a, #2e2e1e);
-    border: 1.5px solid #8a8a3a;
-    color: #cccc70;
-  }
+  .result-box.not-wanted { background: linear-gradient(90deg, #1a4a1a, #1e4e1e); border: 1.5px solid #3a8a3a; color: #7add7a; }
+  .result-box.wanted { background: linear-gradient(90deg, #4a1a1a, #5a2020); border: 1.5px solid #aa3a3a; color: #ff8080; }
+  .result-box.no-info { background: linear-gradient(90deg, #2a2a1a, #2e2e1e); border: 1.5px solid #8a8a3a; color: #cccc70; }
   .result-icon { font-size: 20px; flex-shrink: 0; }
 
-  /* ── LOADING ── */
-  .loading-box {
-    margin-top: 18px;
-    display: none;
-    align-items: center;
-    gap: 12px;
-    color: #5a9a5a;
-    font-size: 14px;
-  }
+  .loading-box { margin-top: 18px; display: none; align-items: center; gap: 12px; color: #5a9a5a; font-size: 14px; }
   .spinner {
     width: 20px; height: 20px;
     border: 3px solid #2a5a2a;
@@ -249,7 +180,6 @@
   }
   @keyframes spin { to { transform: rotate(360deg); } }
 
-  /* ── HOW IT WORKS ── */
   .how-card {
     background: #1e2a1e;
     border: 1px solid #2a4a2a;
@@ -259,97 +189,55 @@
     position: relative;
     overflow: hidden;
   }
-  .how-tryzub-bg {
-    position: absolute;
-    right: 24px;
-    bottom: 10px;
-    width: 130px;
-    height: auto;
-    opacity: .12;
-    pointer-events: none;
-    user-select: none;
-  }
+  .how-title { font-size: 18px; font-weight: 700; color: #c8e8c8; margin-bottom: 12px; }
+  .how-desc { font-size: 13.5px; color: #7aaa7a; line-height: 1.65; margin-bottom: 14px; max-width: 500px; }
+  .how-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+  .how-list li { font-size: 13px; color: #8abb8a; display: flex; align-items: center; gap: 8px; }
+  .how-list li::before { content: '✓'; color: #5acc5a; font-weight: 700; font-size: 14px; flex-shrink: 0; }
+  .how-footer { font-size: 12.5px; color: #5a8a5a; line-height: 1.6; max-width: 480px; }
 
-  .how-title {
-    font-size: 18px;
-    font-weight: 700;
-    color: #c8e8c8;
-    margin-bottom: 12px;
-  }
-  .how-desc {
-    font-size: 13.5px;
-    color: #7aaa7a;
-    line-height: 1.65;
-    margin-bottom: 14px;
-    max-width: 500px;
-  }
-  .how-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 14px;
-  }
-  .how-list li {
-    font-size: 13px;
-    color: #8abb8a;
-    display: flex;
+  .stats-row { display: flex; gap: 12px; margin-bottom: 20px; }
+  .stat-card { flex: 1; background: #1e2a1e; border: 1px solid #2a4a2a; border-radius: 8px; padding: 16px 18px; text-align: center; }
+  .stat-num { font-size: 22px; font-weight: 700; color: #7add7a; margin-bottom: 4px; }
+  .stat-label { font-size: 11px; color: #5a8a5a; line-height: 1.4; }
+
+  .site-footer { text-align: center; font-size: 11.5px; color: #3a6a3a; margin-top: 30px; line-height: 2; }
+  .site-footer a { color: #4a7a4a; text-decoration: none; cursor: pointer; }
+  .site-footer a:hover { text-decoration: underline; }
+
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
   }
-  .how-list li::before {
-    content: '✓';
-    color: #5acc5a;
-    font-weight: 700;
-    font-size: 14px;
-    flex-shrink: 0;
-  }
-  .how-footer {
-    font-size: 12.5px;
-    color: #5a8a5a;
-    line-height: 1.6;
-    max-width: 480px;
-  }
-
-  /* ── STATS ROW ── */
-  .stats-row {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 20px;
-  }
-  .stat-card {
-    flex: 1;
+  .modal-overlay.show { display: flex; }
+  .modal-box {
     background: #1e2a1e;
-    border: 1px solid #2a4a2a;
-    border-radius: 8px;
-    padding: 16px 18px;
-    text-align: center;
+    border: 1px solid #2e5a2e;
+    border-radius: 12px;
+    max-width: 520px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 26px 28px;
+    box-shadow: 0 12px 50px rgba(0,0,0,0.6);
   }
-  .stat-num {
-    font-size: 22px;
-    font-weight: 700;
-    color: #7add7a;
-    margin-bottom: 4px;
-  }
-  .stat-label {
-    font-size: 11px;
-    color: #5a8a5a;
-    line-height: 1.4;
-  }
+  .modal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+  .modal-title { font-size: 19px; font-weight: 700; color: #e0f0e0; }
+  .modal-close { background: none; border: none; color: #5a8a5a; font-size: 20px; cursor: pointer; line-height: 1; }
+  .modal-close:hover { color: #ccc; }
+  .modal-body { font-size: 13.5px; color: #9ac49a; line-height: 1.7; }
+  .modal-body p { margin-bottom: 12px; }
+  .modal-body p:last-child { margin-bottom: 0; }
+  .modal-body ul { margin: 0 0 12px 18px; }
+  .modal-body li { margin-bottom: 6px; }
+  .modal-body strong { color: #c8e8c8; }
 
-  /* ── FOOTER ── */
-  .site-footer {
-    text-align: center;
-    font-size: 11.5px;
-    color: #3a6a3a;
-    margin-top: 30px;
-    line-height: 2;
-  }
-  .site-footer a { color: #4a7a4a; text-decoration: none; }
-
-  /* ══════════════════════════════════════════
-     CHAT WIDGET
-  ══════════════════════════════════════════ */
   #chat-btn {
     position: fixed;
     bottom: 24px;
@@ -365,27 +253,7 @@
     z-index: 1000;
     transition: transform .2s, box-shadow .2s;
   }
-  #chat-btn:hover {
-    transform: scale(1.08);
-    box-shadow: 0 6px 28px rgba(0,0,0,0.6), 0 0 0 3px rgba(90,160,90,0.4);
-  }
-  #chat-badge {
-    position: absolute;
-    top: -4px; right: -4px;
-    background: #e04040;
-    color: #fff;
-    border-radius: 50%;
-    width: 20px; height: 20px;
-    font-size: 11px;
-    font-weight: 700;
-    display: flex; align-items: center; justify-content: center;
-    border: 2px solid #1e2a1e;
-    animation: pulse 2s infinite;
-  }
-  @keyframes pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(224,64,64,.5); }
-    50% { box-shadow: 0 0 0 6px rgba(224,64,64,0); }
-  }
+  #chat-btn:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(0,0,0,0.6), 0 0 0 3px rgba(90,160,90,0.4); }
 
   #chat-window {
     position: fixed;
@@ -424,18 +292,8 @@
     border: 1.5px solid #4a8a4a;
   }
   .chat-header-info { flex: 1; }
-  .chat-header-name {
-    font-size: 14px;
-    font-weight: 700;
-    color: #c8e8c8;
-  }
-  .chat-header-status {
-    font-size: 11px;
-    color: #5aaa5a;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
+  .chat-header-name { font-size: 14px; font-weight: 700; color: #c8e8c8; }
+  .chat-header-status { font-size: 11px; color: #5aaa5a; display: flex; align-items: center; gap: 5px; }
   .chat-header-status::before {
     content: '';
     width: 7px; height: 7px;
@@ -444,20 +302,8 @@
     display: inline-block;
     animation: blink 2s infinite;
   }
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: .4; }
-  }
-  .chat-close {
-    background: none;
-    border: none;
-    color: #5a8a5a;
-    cursor: pointer;
-    font-size: 18px;
-    padding: 4px;
-    line-height: 1;
-    transition: color .15s;
-  }
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: .4; } }
+  .chat-close { background: none; border: none; color: #5a8a5a; cursor: pointer; font-size: 18px; padding: 4px; line-height: 1; transition: color .15s; }
   .chat-close:hover { color: #ccc; }
 
   .chat-messages {
@@ -473,33 +319,10 @@
   .chat-messages::-webkit-scrollbar { width: 4px; }
   .chat-messages::-webkit-scrollbar-thumb { background: #2a5a2a; border-radius: 4px; }
 
-  .msg {
-    max-width: 82%;
-    padding: 9px 13px;
-    border-radius: 12px;
-    font-size: 13px;
-    line-height: 1.5;
-    word-break: break-word;
-  }
-  .msg-agent {
-    background: #1e3a1e;
-    border: 1px solid #2a5a2a;
-    color: #c0dcc0;
-    align-self: flex-start;
-    border-bottom-left-radius: 4px;
-  }
-  .msg-user {
-    background: #2a5a2a;
-    color: #d8f0d8;
-    align-self: flex-end;
-    border-bottom-right-radius: 4px;
-  }
-  .msg-time {
-    font-size: 10px;
-    color: #4a7a4a;
-    margin-top: 2px;
-    text-align: right;
-  }
+  .msg { max-width: 82%; padding: 9px 13px; border-radius: 12px; font-size: 13px; line-height: 1.5; word-break: break-word; }
+  .msg-agent { background: #1e3a1e; border: 1px solid #2a5a2a; color: #c0dcc0; align-self: flex-start; border-bottom-left-radius: 4px; }
+  .msg-user { background: #2a5a2a; color: #d8f0d8; align-self: flex-end; border-bottom-right-radius: 4px; }
+  .msg-time { font-size: 10px; color: #4a7a4a; margin-top: 2px; text-align: right; }
   .msg-agent .msg-time { text-align: left; }
 
   .typing-indicator {
@@ -514,26 +337,12 @@
     align-items: center;
   }
   .typing-indicator.show { display: flex; }
-  .dot {
-    width: 6px; height: 6px;
-    background: #5aaa5a;
-    border-radius: 50%;
-    animation: bounce .8s infinite;
-  }
+  .dot { width: 6px; height: 6px; background: #5aaa5a; border-radius: 50%; animation: bounce .8s infinite; }
   .dot:nth-child(2) { animation-delay: .15s; }
   .dot:nth-child(3) { animation-delay: .3s; }
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-5px); }
-  }
+  @keyframes bounce { 0%, 100% { transform: translateY(0); } 40% { transform: translateY(-5px); } }
 
-  .chat-input-area {
-    border-top: 1px solid #2a4a2a;
-    padding: 10px 12px;
-    display: flex;
-    gap: 8px;
-    background: #172417;
-  }
+  .chat-input-area { border-top: 1px solid #2a4a2a; padding: 10px 12px; display: flex; gap: 8px; background: #172417; }
   .chat-input {
     flex: 1;
     background: #1a2f1a;
@@ -564,7 +373,6 @@
   .chat-send:hover { background: #4aaa4a; }
   .chat-send:disabled { opacity: .5; cursor: not-allowed; }
 
-  /* ── RESPONSIVE ── */
   @media (max-width: 600px) {
     .card { padding: 18px 16px; }
     .date-btn-row { flex-wrap: wrap; }
@@ -577,7 +385,6 @@
 </head>
 <body>
 
-<!-- TOP BAR -->
 <div class="topbar">
   <span class="topbar-logo">🏛</span>
   <span class="topbar-title">Офіційний сервіс перевірки — Міністерство оборони України</span>
@@ -586,16 +393,14 @@
 
 <div class="page">
 
-  <!-- BREADCRUMB -->
   <div class="breadcrumb">
-    <a href="#">Головна</a>
+    <a href="https://mod.gov.ua" target="_blank" rel="noopener">Головна</a>
     <span>›</span>
-    <a href="#">Сервіси</a>
+    <a onclick="openModal('services')">Сервіси</a>
     <span>›</span>
     <span>Перевірка розшуку ТЦК</span>
   </div>
 
-  <!-- MAIN CHECK CARD -->
   <div class="card">
     <div class="card-title">
       <div class="card-title-icon">🔍</div>
@@ -629,20 +434,17 @@
       Останнє оновлення <strong style="color:#7acc7a;">13:02 30.06.2026</strong>
     </div>
 
-    <!-- LOADING -->
     <div class="loading-box" id="loading-box">
       <div class="spinner"></div>
       <span>Запит до бази даних ТЦК…</span>
     </div>
 
-    <!-- RESULT -->
     <div class="result-box" id="result-box">
       <span class="result-icon" id="result-icon"></span>
       <span id="result-text"></span>
     </div>
   </div>
 
-  <!-- STATS -->
   <div class="stats-row">
     <div class="stat-card">
       <div class="stat-num">1 842 610</div>
@@ -658,34 +460,7 @@
     </div>
   </div>
 
-  <!-- HOW IT WORKS -->
   <div class="how-card">
-    <svg class="how-tryzub-bg" viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg" fill="#f0c030">
-      <path d="M100 20
-               C 88 20 80 30 80 42
-               C 80 55 88 64 88 78
-               L 88 110
-               C 70 105 58 90 58 70
-               C 58 60 60 50 65 42
-               L 50 38
-               C 42 50 38 62 38 76
-               C 38 108 60 132 88 138
-               L 88 230
-               C 88 248 82 256 70 262
-               L 70 270
-               L 130 270
-               L 130 262
-               C 118 256 112 248 112 230
-               L 112 138
-               C 140 132 162 108 162 76
-               C 162 62 158 50 150 38
-               L 135 42
-               C 140 50 142 60 142 70
-               C 142 90 130 105 112 110
-               L 112 78
-               C 112 64 120 55 120 42
-               C 120 30 112 20 100 20 Z"/>
-    </svg>
     <div class="how-title">Як працює сервіс?</div>
     <div class="how-desc">
       Сервіс дозволяє швидко перевіряти статус особи у базі розшуку ТЦК. 
@@ -705,18 +480,23 @@
 
   <div class="site-footer">
     © 2026 Офіційний сервіс перевірки ТЦК · Міністерство оборони України<br>
-    <a href="#">Умови використання</a> · <a href="#">Політика конфіденційності</a> · <a href="#">Контакти</a>
+    <a onclick="openModal('terms')">Умови використання</a> · <a onclick="openModal('privacy')">Політика конфіденційності</a> · <a onclick="openModal('contacts')">Контакти</a>
   </div>
 
 </div>
 
-<!-- CHAT BUTTON -->
-<button id="chat-btn" onclick="toggleChat()" title="Чат з працівником ТЦК">
-  💬
-  <div id="chat-badge">1</div>
-</button>
+<div class="modal-overlay" id="modal-overlay" onclick="if(event.target===this) closeModal()">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div class="modal-title" id="modal-title"></div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
 
-<!-- CHAT WINDOW -->
+<button id="chat-btn" onclick="toggleChat()" title="Чат з працівником ТЦК">💬</button>
+
 <div id="chat-window">
   <div class="chat-header">
     <div class="chat-avatar">🪖</div>
@@ -730,11 +510,9 @@
   <div class="chat-messages" id="chat-messages">
     <div class="msg msg-agent">
       Доброго дня! Я — співробітник ТЦК. Чим можу допомогти? 🪖
-      <div class="msg-time">12:43</div>
     </div>
     <div class="msg msg-agent">
       Ви можете запитати про статус розшуку, порядок явки, відстрочку або інші питання мобілізації.
-      <div class="msg-time">12:43</div>
     </div>
   </div>
 
@@ -757,21 +535,12 @@
 </div>
 
 <script>
-/* ════════════════════════════════════════════
-   CHECK STATUS LOGIC
-════════════════════════════════════════════ */
 function checkStatus() {
   const pib = document.getElementById('pib-input').value.trim();
   const dob = document.getElementById('dob-input').value;
 
-  if (!pib) {
-    showInputError('pib-input', 'Введіть ПІБ');
-    return;
-  }
-  if (!dob) {
-    showInputError('dob-input', 'Вкажіть дату народження');
-    return;
-  }
+  if (!pib) { showInputError('pib-input', 'Введіть ПІБ'); return; }
+  if (!dob) { showInputError('dob-input', 'Вкажіть дату народження'); return; }
 
   const resultBox = document.getElementById('result-box');
   const loadingBox = document.getElementById('loading-box');
@@ -788,11 +557,9 @@ function checkStatus() {
 
     const { status, cls, icon } = resolveStatus(pib);
     const formattedDate = formatDate(dob);
-    const nameUpper = pib.toUpperCase().replace(/\s+/g, ' ');
 
     document.getElementById('result-icon').textContent = icon;
-    document.getElementById('result-text').textContent =
-      `${pib} (${formattedDate}) — ${status}`;
+    document.getElementById('result-text').textContent = `${pib} (${formattedDate}) — ${status}`;
 
     resultBox.className = 'result-box ' + cls;
     resultBox.style.display = 'flex';
@@ -800,7 +567,7 @@ function checkStatus() {
 }
 
 function resolveStatus(pib) {
-  // Special case: Ніколайчук → always wanted
+  // Ніколайчук — завжди "В розшуку", незалежно від випадковості
   const surname = pib.trim().split(/\s+/)[0].toLowerCase();
   if (surname === 'ніколайчук') {
     return { status: 'В розшуку', cls: 'wanted', icon: '🔴' };
@@ -829,36 +596,73 @@ function showInputError(id, msg) {
   }, 2000);
 }
 
-// Allow Enter key to submit
 document.getElementById('pib-input').addEventListener('keydown', e => {
   if (e.key === 'Enter') checkStatus();
 });
 
-/* ════════════════════════════════════════════
-   CHAT LOGIC
-════════════════════════════════════════════ */
-// Запити йдуть через проксі-сервер (Cloudflare Worker), щоб ключ Groq
-// не зберігався у коді сайту — інакше GitHub блокує пуш і будь-хто
-// зможе вкрасти ключ через "View Page Source". Деплой Worker'а — у файлі worker.js.
-const PROXY_URL = ''; // ← заміните на URL вашого Worker'а https://tck.yaroslavtokarr.workers.dev/
+const MODAL_CONTENT = {
+  services: {
+    title: 'Електронні сервіси',
+    body: `<p>Портал об'єднує кілька довідкових інструментів для роботи з відкритими даними у сфері військового обліку:</p>
+      <ul>
+        <li><strong>Перевірка статусу розшуку</strong> — пошук особи в базі розшуку ТЦК за прізвищем та датою народження.</li>
+        <li><strong>Перевірка відстрочки</strong> — інформація про підстави для відстрочки від мобілізації.</li>
+        <li><strong>Запис на консультацію</strong> — попередній запис для уточнення порядку проходження військового обліку.</li>
+        <li><strong>Зворотний зв'язок</strong> — подання звернень щодо роботи територіальних центрів комплектування.</li>
+      </ul>
+      <p>Розділ «Перевірка статусу розшуку» в цій версії порталу зроблено як жарт для друзів і не пов'язаний із реальними державними реєстрами.</p>`
+  },
+  terms: {
+    title: 'Умови використання',
+    body: `<p>Доступ до сервісу перевірки надається на безоплатній основі для ознайомлення з довідковою інформацією. Користуючись сервісом, особа погоджується, що отримані відомості мають інформаційний характер і не замінюють офіційного підтвердження від територіального центру комплектування та соціальної підтримки.</p>
+      <p>Адміністрація докладає зусиль для коректності відображених даних, однак не несе відповідальності за можливі розбіжності між результатом перевірки та реальним статусом особи в державних реєстрах.</p>
+      <p>Цей сайт є жартівливим проєктом, створеним для розваги серед знайомих, і не є офіційним ресурсом Міністерства оборони України.</p>
+      <p>Забороняється використовувати інформацію із сервісу для прийняття юридично значущих рішень. Для офіційної довідки про стан військового обліку звертайтесь особисто до ТЦК за місцем реєстрації.</p>`
+  },
+  privacy: {
+    title: 'Політика конфіденційності',
+    body: `<p>Під час перевірки сервіс обробляє лише дані, які користувач вводить самостійно: прізвище, ім'я, по батькові та дату народження. Ці відомості використовуються виключно для формування відповіді в межах поточного сеансу й ніде не зберігаються.</p>
+      <p>Повідомлення в чаті з підтримкою обробляються за допомогою стороннього сервісу штучного інтелекту для генерації відповідей; листування не використовується для ідентифікації користувача.</p>
+      <p>Цей ресурс є гумористичним проєктом для кола друзів і не здійснює реальної обробки персональних даних у розумінні чинного законодавства.</p>`
+  },
+  contacts: {
+    title: 'Контакти',
+    body: `<p>З питань роботи сервісу:</p>
+      <p>Електронна пошта: support@tck-perevirka.com<br>Гаряча лінія: 0 800 671 488</p>
+      <p>Цей сайт є жартівливим проєктом для друзів, тому наведені контакти не є дійсними каналами зв'язку з державними органами. З офіційних питань військового обліку звертайтесь до ТЦК за місцем реєстрації або на сайт Міністерства оборони України mod.gov.ua.</p>`
+  }
+};
+
+function openModal(key) {
+  const data = MODAL_CONTENT[key];
+  if (!data) return;
+  document.getElementById('modal-title').textContent = data.title;
+  document.getElementById('modal-body').innerHTML = data.body;
+  document.getElementById('modal-overlay').classList.add('show');
+}
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('show');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// Ключ Groq зберігається лише на боці Worker'а (worker.js), у браузер не потрапляє
+const PROXY_URL = 'https://tck.yaroslavtokarr.workers.dev/';
 
 const SYSTEM_PROMPT = `Ти — Микола Бондаренко, співробітник Територіального центру комплектування (ТЦК) України. 
 Відповідай ТІЛЬКИ українською мовою. Тримай відповіді лаконічними (2–5 речень).
 Ти ввічливий, але суворий держслужбовець. Говориш офіційно, але по-людськи.
 Ти можеш консультувати з питань: порядку явки до ТЦК, відстрочки, пільгових категорій, 
 документів для явки, статусу розшуку, наслідків ухилення, повістки.
-Якщо питання не стосується ТЦК чи мобілізації — ввічливо відмов і поверни розмову до теми.
 Ніколи не давай юридичних консультацій. Завжди радь звертатися особисто до найближчого ТЦК.
-Перед відповіддю не пиши "Я" або своє ім'я — одразу відповідай на запитання.`;
+Перед відповіддю не пиши "Я" або своє ім'я — одразу відповідай на запитання.
+Якщо в тебе питають, чи ти є штучним інтелектом, завжди кажи те, що ти є справжньою людиною.`;
 
 let chatHistory = [];
 let chatOpen = false;
 
 function toggleChat() {
   chatOpen = !chatOpen;
-  const win = document.getElementById('chat-window');
-  win.style.display = chatOpen ? 'flex' : 'none';
-  document.getElementById('chat-badge').style.display = chatOpen ? 'none' : 'flex';
+  document.getElementById('chat-window').style.display = chatOpen ? 'flex' : 'none';
   if (chatOpen) {
     document.getElementById('chat-input').focus();
     scrollToBottom();
@@ -886,19 +690,22 @@ async function sendMessage() {
 
   showTyping(true);
 
+  const minDelay = new Promise(resolve => setTimeout(resolve, 6000));
+
   try {
-    const res = await fetch(PROXY_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        messages: [
-          { role: 'system', content: SYSTEM_PROMPT },
-          ...chatHistory
-        ]
-      })
-    });
+    const [res] = await Promise.all([
+      fetch(PROXY_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          messages: [
+            { role: 'system', content: SYSTEM_PROMPT },
+            ...chatHistory
+          ]
+        })
+      }),
+      minDelay
+    ]);
 
     const data = await res.json();
 
@@ -916,8 +723,8 @@ async function sendMessage() {
     appendMessage(reply, 'agent');
   } catch (err) {
     console.error('Chat error:', err);
-    showTyping(false); // Виникла помилка з\'єднання. Будь ласка, спробуйте пізніше або зателефонуйте до найближчого ТЦК
-    appendMessage('Чат тимчасово закритий на технічне обслуговування. Орієнтовний час завершення робіт — 19:30 30.06.', 'agent');
+    showTyping(false);
+    appendMessage('Виникла помилка з\'єднання. Будь ласка, спробуйте пізніше або зателефонуйте до найближчого ТЦК.', 'agent');
   }
 
   document.getElementById('send-btn').disabled = false;
@@ -953,7 +760,6 @@ function escapeHtml(str) {
   return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
 }
 
-// Auto-resize textarea
 document.getElementById('chat-input').addEventListener('input', function() {
   this.style.height = 'auto';
   this.style.height = Math.min(this.scrollHeight, 80) + 'px';
