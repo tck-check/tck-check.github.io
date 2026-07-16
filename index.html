@@ -391,6 +391,24 @@
   .chat-send:hover { background: var(--orange-dark); }
   .chat-send:disabled { opacity: .5; cursor: not-allowed; }
 
+  .no-date-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--gray-700);
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .no-date-label input[type="checkbox"] {
+    width: 14px; height: 14px;
+    accent-color: var(--orange);
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  #dob-input:disabled { opacity: .35; cursor: not-allowed; }
+
   @media (max-width: 600px) {
     .card { padding: 18px 16px; }
     .date-btn-row { flex-wrap: wrap; }
@@ -439,7 +457,13 @@
         <input type="text" id="pib-input" placeholder="Іваненко Іван Іванович" autocomplete="off">
       </div>
       <div>
-        <div class="field-label">Дата народження</div>
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:4px; flex-wrap:wrap;">
+          <div class="field-label" style="margin-bottom:0;">Дата народження</div>
+          <label class="no-date-label">
+            <input type="checkbox" id="no-date-cb" onchange="toggleNoDate()">
+            <span>Пошук без дати народження <span style="color:var(--gray-500); font-weight:400;">(уповільнює пошук)</span></span>
+          </label>
+        </div>
         <div class="date-btn-row">
           <input type="date" id="dob-input" max="2005-12-31">
           <button class="btn-check" id="check-btn" onclick="checkStatus()">🔍 Перевірити</button>
@@ -473,7 +497,7 @@
       <div class="stat-label">Цілодобова робота сервісу</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num">~2 сек</div>
+      <div class="stat-num">~4 сек</div>
       <div class="stat-label">Час відповіді системи</div>
     </div>
   </div>
@@ -485,7 +509,7 @@
       Інформація отримується у режимі реального часу і відображає поточний стан системи.
     </div>
     <ul class="how-list">
-      <li>Щоденне оновлення бази даних</li>
+      <li>Щотижневе оновлення бази даних</li>
       <li>Конфіденційність та захист персональної інформації</li>
       <li>Миттєва відповідь системи</li>
       <li>Інтеграція з реєстрами Міноборони</li>
@@ -556,10 +580,11 @@
 <script>
 function checkStatus() {
   const pib = document.getElementById('pib-input').value.trim();
+  const noDate = document.getElementById('no-date-cb').checked;
   const dob = document.getElementById('dob-input').value;
 
   if (!pib) { showInputError('pib-input', 'Введіть ПІБ'); return; }
-  if (!dob) { showInputError('dob-input', 'Вкажіть дату народження'); return; }
+  if (!noDate && !dob) { showInputError('dob-input', 'Вкажіть дату народження'); return; }
 
   const resultBox = document.getElementById('result-box');
   const loadingBox = document.getElementById('loading-box');
@@ -569,13 +594,17 @@ function checkStatus() {
   loadingBox.style.display = 'flex';
   checkBtn.disabled = true;
 
-  const delay = 1500 + Math.random() * 1200;
+  // З датою: 4–5 сек, без дати: 6–9 сек
+  const delay = noDate
+    ? 6000 + Math.random() * 3000
+    : 4000 + Math.random() * 1000;
+
   setTimeout(() => {
     loadingBox.style.display = 'none';
     checkBtn.disabled = false;
 
     const { status, cls, icon } = resolveStatus(pib);
-    const formattedDate = formatDate(dob);
+    const formattedDate = noDate ? 'дату не вказано' : formatDate(dob);
 
     document.getElementById('result-icon').textContent = icon;
     document.getElementById('result-text').textContent = `${pib} (${formattedDate}) — ${status}`;
@@ -583,6 +612,11 @@ function checkStatus() {
     resultBox.className = 'result-box ' + cls;
     resultBox.style.display = 'flex';
   }, delay);
+}
+
+function toggleNoDate() {
+  const dob = document.getElementById('dob-input');
+  dob.disabled = document.getElementById('no-date-cb').checked;
 }
 
 function resolveStatus(pib) {
